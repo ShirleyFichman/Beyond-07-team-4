@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'jobseeker.apps.JobseekerConfig',
     'django.contrib.staticfiles',
     'job_board.apps.JobBoardConfig',
+    'personal_profile.apps.PersonalProfileConfig',
 ]
 
 MIDDLEWARE = [
@@ -126,3 +127,12 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_URL= '/images/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+
+MEDIA_ROOT= os.path.join(BASE_DIR, 'personal_profile/static/personal_profile/images')
+
